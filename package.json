@@ -1,0 +1,19 @@
+{
+  "name": "puppeteer-examples",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^0.12.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/checkly/puppeteer-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/checkly/puppeteer-examples/issues"
+  },
+  "homepage": "https://github.com/checkly/puppeteer-examples#readme"
+}

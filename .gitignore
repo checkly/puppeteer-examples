@@ -4,6 +4,7 @@
 logs
 *.log
 npm-debug.log*
+out
 
 # Runtime data
 pids
@@ -50,3 +51,4 @@ jspm_packages
 .yarn-integrity
 
 .idea
+*.png
