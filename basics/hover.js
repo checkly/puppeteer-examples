@@ -17,6 +17,3 @@ const puppeteer = require('puppeteer');
   await page.screenshot({ path: 'hover.png' })
   await browser.close()
 })()
-
-
-

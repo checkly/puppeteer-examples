@@ -16,6 +16,3 @@ const puppeteer = require('puppeteer');
   await page.screenshot({ path: 'keyboard.png' })
   await browser.close()
 })()
-
-
-

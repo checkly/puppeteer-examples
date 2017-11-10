@@ -1,5 +1,5 @@
 /**
- * @name screenshots
+ * @name screenshots clipped
  *
  * @desc Grabs and clips out just the stock tickers on the Yahoo finance page
  *

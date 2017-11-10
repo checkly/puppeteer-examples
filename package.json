@@ -5,7 +5,10 @@
   "dependencies": {
     "puppeteer": "^0.12.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "file-system": "^2.2.2",
+    "js-comments": "^0.5.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/checkly/puppeteer-examples.git"
