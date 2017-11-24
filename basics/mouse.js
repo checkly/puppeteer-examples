@@ -20,7 +20,7 @@ const puppeteer = require('puppeteer');
   await page.goto('http://unixpapa.com/js/testmouse.html')
 
   // click an area
-  await page.mouse.click(132,103, { button: 'left' })
+  await page.mouse.click(132, 103, { button: 'left' })
 
   // the screenshot should show feedback from the page that right part was clicked.
   await page.screenshot({ path: 'mouse_click.png' })

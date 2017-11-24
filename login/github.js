@@ -5,8 +5,8 @@
  * `GITHUB_USER=myuser GITHUB_PWD=mypassword node github.js`
  *
  */
-const puppeteer = require('puppeteer');
-
+const puppeteer = require('puppeteer')
+const screenshot = 'github.png';
 (async () => {
   const browser = await puppeteer.launch({headless: true})
   const page = await browser.newPage()
@@ -15,6 +15,7 @@ const puppeteer = require('puppeteer');
   await page.type('#password', process.env.GITHUB_PWD)
   await page.click('[name="commit"]')
   await page.waitForNavigation()
-  await page.screenshot({path: 'github.png'})
+  await page.screenshot({ path: screenshot })
   browser.close()
+  console.log('See screenshot: ' + screenshot)
 })()

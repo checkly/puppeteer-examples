@@ -4,7 +4,8 @@
  * @desc  Looks for Fleetwood Mac's "Dreams" video on youtube.com and clicks on the third video.
  * Waits for 5 seconds for the video to load.
  */
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer')
+const screenshot = 'youtube_fm_dreams_video.png'
 try {
   (async () => {
     const browser = await puppeteer.launch()
@@ -18,8 +19,9 @@ try {
     await videos[2].click()
     await page.waitForSelector('.html5-video-container')
     await page.waitFor(5000)
-    await page.screenshot({path: 'youtube_fm_dreams_video.png'})
+    await page.screenshot({ path: screenshot })
     await browser.close()
+    console.log('See screenshot: ' + screenshot)
   })()
 } catch (err) {
   console.error(err)
