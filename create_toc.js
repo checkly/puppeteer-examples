@@ -5,7 +5,14 @@ const _ = require('lodash')
 const toc = {}
 const rootUrl = 'https://github.com/checkly/puppeteer-examples/blob/master'
 
-const pageHeader = `# Puppeteer examples\n\nPuppeteer Headless Chrome examples for real life use cases. Clone this repo and run them directy with a simple \`node\` command.\n`
+const pageHeader = '# Puppeteer examples\n\nPuppeteer Headless Chrome examples for real life use cases. Clone this repo' +
+  ' and run them directy with a simple `node` command.\n\n' +
+  '```bash\n' +
+  'git clone https://github.com/checkly/puppeteer-examples\n' +
+  'cd puppeteer-examples\n' +
+  'npm i\n' +
+  'node search/amazon.js\n' +
+  '```'
 
 const headers = {
   basics: 'The very basic on getting useful info from web page. Highlights the basic Puppeteer functions.',
