@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "puppeteer": "^0.12.0"
+    "puppeteer": "^0.13.0"
   },
   "devDependencies": {
+    "eslint-plugin-mocha": "^4.11.0",
     "file-system": "^2.2.2",
+    "jest": "^21.2.1",
     "js-comments": "^0.5.4",
     "lodash": "^4.17.4"
   },
