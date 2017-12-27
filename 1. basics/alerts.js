@@ -1,5 +1,5 @@
 /**
- * @name alets
+ * @name alerts
  *
  * @desc Create an alert dialog and close it again.
  *

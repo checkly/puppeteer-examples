@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "puppeteer": "^0.13.0"
+    "puppeteer": "git+https://github.com/GoogleChrome/puppeteer.git"
   },
   "devDependencies": {
     "eslint-plugin-mocha": "^4.11.0",

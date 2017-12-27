@@ -15,12 +15,36 @@ const pageHeader = '# Puppeteer examples\n\nPuppeteer Headless Chrome examples f
   '```'
 
 const headers = {
-  basics: 'The very basic on getting useful info from web page. Highlights the basic Puppeteer functions.',
-  search: 'Common search input and select methods on search results.',
-  login: 'Common login scenarios on popular website. Credentials mostly supplied with setting `ENV` variables.'
+  '1. basics': 'The very basic on getting useful info from web page. Highlights the basic Puppeteer functions.',
+  '2. search': 'Common search input and select methods on search results.',
+  '3. login': 'Common login scenarios on popular website. Credentials mostly supplied with setting `ENV` variables.',
+  '4. shopping-carts': 'How to handle shopping cart functions like adding and removing items.',
+  '5. mocha-tests': 'Mocha test runner scripts that use Puppeteer and the standard `assert` library to check specific ' +
+  'properties and actions on a page. Install Mocha as a global dependency and run them as any other script\n\n' +
+  '```bash\n' +
+  'npm i -g mocha\n' +
+  'mocha mocha-tests/alibaba.js\n' +
+  '```',
+  '6. jest-tests': 'Jest test runner scripts that use Puppeteer to check specific properties and actions on a page. ' +
+  'Very similar to the Mocha tests, but using the Jest `expect` assertions. Install Jest as a global dependency and ' +
+  'run them as any other script\n\n' +
+  '```bash\n' +
+  'npm i -g jest\n' +
+  'jest jest-tests/alibaba.js\n' +
+  '```'
 }
 
-fsS.recurseSync('.', ['basics/*.js', 'login/*.js', 'search/*.js'], (filePath, relative, fileName) => {
+
+const directories = [
+  '1. basics/*.js',
+  '2. search/*.js',
+  '3. login/*.js',
+  '4. shopping-carts/*.js',
+  '5. mocha-tests/*.js',
+  '6. jest-tests/*.js'
+]
+
+fsS.recurseSync('.', directories, (filePath, relative, fileName) => {
   const content = comments.parse(fs.readFileSync(filePath, 'utf8'))
   const dirFile = relative.split('/')
   if (toc[dirFile[0]]) {

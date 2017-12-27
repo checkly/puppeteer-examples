@@ -52,3 +52,4 @@ jspm_packages
 
 .idea
 *.png
+trace.json

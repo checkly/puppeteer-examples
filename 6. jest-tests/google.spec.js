@@ -1,3 +1,8 @@
+/**
+ * @name Google search
+ * @desc Searches Google.com for a term and checks if the first link matches. This check should fail.
+ */
+
 const puppeteer = require('puppeteer')
 
 let browser

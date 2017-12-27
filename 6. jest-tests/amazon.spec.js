@@ -1,3 +1,8 @@
+/**
+ * @name Alibaba product search
+ * @desc Searches Alibaba.com for a product and checks if the results show up
+ */
+
 const puppeteer = require('puppeteer')
 let browser
 let page
@@ -19,11 +24,11 @@ describe('Amazon Homepage', async () => {
     await page.type('#twotabsearchtextbox', 'nyan cat pullover')
     await page.click('input.nav-input')
     await page.waitForSelector('#resultsCol')
-    const firstProduct = page.$('a.a-link-normal.a-text-normal')
+    const firstProduct = await page.$('a.a-link-normal.a-text-normal')
     expect(firstProduct).toBeTruthy()
   })
 
-  afterAll( async () => {
+  afterAll(async () => {
     await browser.close()
   })
 })
