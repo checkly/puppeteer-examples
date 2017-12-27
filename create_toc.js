@@ -82,6 +82,6 @@ for (let key in toc) {
     console.log(`### ${item.name}`)
     console.log(item.desc)
     console.log('\n')
-    console.log(`[${item.relative}](${item.url})`)
+    console.log(`[${item.relative}](${item.url.replace(/ /g,'%20')})`)
   })
 }
