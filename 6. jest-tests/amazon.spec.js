@@ -1,6 +1,6 @@
 /**
- * @name Alibaba product search
- * @desc Searches Alibaba.com for a product and checks if the results show up
+ * @name Amazon product search
+ * @desc Searches Amazon.com for a product and checks if the results show up
  */
 
 const puppeteer = require('puppeteer')

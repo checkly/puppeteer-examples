@@ -27,15 +27,20 @@ node search/amazon.js
 - [3. login](#3-login)
   * [Github](#github)
 - [4. shopping-carts](#4-shopping-carts)
+  * [Staples shopping cart](#staples-shopping-cart)
   * [Walmart shopping cart](#walmart-shopping-cart)
 - [5. mocha-tests](#5-mocha-tests)
   * [Alibaba product search](#alibaba-product-search)
-  * [Alibaba product search](#alibaba-product-search)
+  * [Amazon product search](#amazon-product-search)
+  * [Etsy shopping cart](#etsy-shopping-cart)
+  * [Gmail signup](#gmail-signup)
   * [Google search](#google-search)
+  * [Staples shopping cart](#staples-shopping-cart)
   * [Walmart shopping cart](#walmart-shopping-cart)
 - [6. jest-tests](#6-jest-tests)
   * [Alibaba product search](#alibaba-product-search)
-  * [Alibaba product search](#alibaba-product-search)
+  * [Amazon product search](#amazon-product-search)
+  * [Etsy shopping cart](#etsy-shopping-cart)
   * [Google search](#google-search)
   * [Walmart shopping cart](#walmart-shopping-cart)
 
@@ -123,6 +128,11 @@ Logs into Github. Provide your username and password as environment variables wh
 [3. login/github.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/github.js)
 ## 4. shopping-carts
 How to handle shopping cart functions like adding and removing items.  
+### Staples shopping cart
+Goes to the face paint category and adds to the shopping cart.
+
+
+[4. shopping-carts/staples.js](https://github.com/checkly/puppeteer-examples/blob/master/4.%20shopping-carts/staples.js)
 ### Walmart shopping cart
 Looks for a Nintendo's Mario Odyssey and adds it to the shopping cart.
 
@@ -140,16 +150,31 @@ Searches Alibaba.com for a product and checks if the results show up
 
 
 [5. mocha-tests/alibaba.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20mocha-tests/alibaba.js)
-### Alibaba product search
-Searches Alibaba.com for a product and checks if the results show up
+### Amazon product search
+Searches Amazon.com for a product and checks if the results show up
 
 
 [5. mocha-tests/amazon.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20mocha-tests/amazon.js)
+### Etsy shopping cart
+Goes to etsy.com, select the first knick knack and adds it to the shopping cart.
+
+
+[5. mocha-tests/etsy.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20mocha-tests/etsy.js)
+### Gmail signup
+Checks the signup flow from the landing page. Clicks the
+
+
+[5. mocha-tests/gmail.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20mocha-tests/gmail.js)
 ### Google search
 Searches Google.com for a term and checks if the first link matches. This check should fail.
 
 
 [5. mocha-tests/google.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20mocha-tests/google.js)
+### Staples shopping cart
+Goes to staples.com and adds a some facepaint to an empty shopping cart. Validates the correct amount.
+
+
+[5. mocha-tests/staples.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20mocha-tests/staples.js)
 ### Walmart shopping cart
 Goes to walmart.com and adds a Nintendo game to an empty shopping cart. Validates the correct amount.
 
@@ -167,11 +192,16 @@ Searches Alibaba.com for a product and checks if the results show up
 
 
 [6. jest-tests/alibaba.spec.js](https://github.com/checkly/puppeteer-examples/blob/master/6.%20jest-tests/alibaba.spec.js)
-### Alibaba product search
-Searches Alibaba.com for a product and checks if the results show up
+### Amazon product search
+Searches Amazon.com for a product and checks if the results show up
 
 
 [6. jest-tests/amazon.spec.js](https://github.com/checkly/puppeteer-examples/blob/master/6.%20jest-tests/amazon.spec.js)
+### Etsy shopping cart
+Goes to etsy.com, select the first knick knack and adds it to the shopping cart.
+
+
+[6. jest-tests/etsy.spec.js](https://github.com/checkly/puppeteer-examples/blob/master/6.%20jest-tests/etsy.spec.js)
 ### Google search
 Searches Google.com for a term and checks if the first link matches. This check should fail.
 

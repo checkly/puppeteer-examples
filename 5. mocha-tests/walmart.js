@@ -27,8 +27,8 @@ describe('Walmart shopping cart', () => {
     const quantity = await page.evaluate(() => document.querySelector('a.OrderSummary-SubTotal-itemCountLink').textContent)
     assert.equal(quantity, '(1 item)')
   }).timeout(10000)
+})
 
-  after(async () => {
-    await browser.close()
-  })
+after(async () => {
+  await browser.close()
 })

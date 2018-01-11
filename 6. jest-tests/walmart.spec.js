@@ -10,6 +10,7 @@ let page
 beforeAll(async () => {
   browser = await puppeteer.launch()
   page = await browser.newPage()
+  await page.tracing.start({path: 'trace.json'})
 })
 
 describe('Walmart shopping cart', () => {
@@ -28,6 +29,7 @@ describe('Walmart shopping cart', () => {
   }, 10000)
 
   afterAll(async () => {
+    await page.tracing.stop()
     await browser.close()
   })
 })

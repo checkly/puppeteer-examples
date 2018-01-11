@@ -1,6 +1,6 @@
 /**
- * @name Alibaba product search
- * @desc Searches Alibaba.com for a product and checks if the results show up
+ * @name Amazon product search
+ * @desc Searches Amazon.com for a product and checks if the results show up
  */
 
 const assert = require('assert')
@@ -29,8 +29,8 @@ describe('Amazon Homepage', () => {
     const firstProduct = await page.$('a.a-link-normal.a-text-normal')
     assert.ok(firstProduct)
   }).timeout(10000)
+})
 
-  after(async () => {
-    await browser.close()
-  })
+after(async () => {
+  await browser.close()
 })

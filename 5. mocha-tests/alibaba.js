@@ -29,8 +29,8 @@ describe('Alibaba Search', () => {
     await page.screenshot({ path: 'ali.png' })
     assert.ok(firstProduct)
   }).timeout(10000)
+})
 
-  after(async () => {
-    await browser.close()
-  })
+after(async () => {
+  await browser.close()
 })
