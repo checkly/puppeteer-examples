@@ -6,8 +6,10 @@ Puppeteer Headless Chrome examples for real life use cases. Clone this repo and 
 git clone https://github.com/checkly/puppeteer-examples
 cd puppeteer-examples
 npm i
-node search/amazon.js
+node 2.\ search/amazon.js
 ```
+You can run these scripts in the [try puppeteer playground](https://trypuppeteer.com).
+
 - [1. basics](#1-basics)
   * [alerts](#alerts)
   * [emulate devices](#emulate-devices)

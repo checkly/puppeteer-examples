@@ -11,8 +11,9 @@ const pageHeader = '# Puppeteer examples\n\nPuppeteer Headless Chrome examples f
   'git clone https://github.com/checkly/puppeteer-examples\n' +
   'cd puppeteer-examples\n' +
   'npm i\n' +
-  'node search/amazon.js\n' +
-  '```'
+  'node 2.\\ search/amazon.js\n' +
+  '```\n' +
+  'You can run these scripts in the [try puppeteer playground](https://trypuppeteer.com).\n'
 
 const headers = {
   '1. basics': 'The very basic on getting useful info from web page. Highlights the basic Puppeteer functions.',
