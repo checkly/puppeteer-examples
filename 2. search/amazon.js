@@ -6,8 +6,7 @@
 const puppeteer = require('puppeteer')
 const screenshot = 'amazon_nyan_cat_pullover.png'
 try {
-  (async () => {
-    const browser = await puppeteer.launch()
+  puppeteer.launch().then(async browser => {
     const page = await browser.newPage()
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto('https://www.amazon.com')
@@ -23,7 +22,7 @@ try {
     await page.screenshot({path: screenshot})
     await browser.close()
     console.log('See screenshot: ' + screenshot)
-  })()
+  })
 } catch (err) {
   console.error(err)
 }

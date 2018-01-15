@@ -7,7 +7,7 @@
  */
 const puppeteer = require('puppeteer')
 const screenshot = 'github.png';
-(async () => {
+puppeteer.launch().then(async browser => {
   const browser = await puppeteer.launch({headless: true})
   const page = await browser.newPage()
   await page.goto('https://github.com/login')
@@ -18,4 +18,4 @@ const screenshot = 'github.png';
   await page.screenshot({ path: screenshot })
   browser.close()
   console.log('See screenshot: ' + screenshot)
-})()
+})
