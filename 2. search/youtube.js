@@ -7,7 +7,8 @@
 const puppeteer = require('puppeteer')
 const screenshot = 'youtube_fm_dreams_video.png'
 try {
-  puppeteer.launch().then(async browser => {
+  (async () => {
+    const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.goto('https://youtube.com')
     await page.type('#search', 'Fleetwood Mac Dreams')
@@ -21,7 +22,7 @@ try {
     await page.screenshot({ path: screenshot })
     await browser.close()
     console.log('See screenshot: ' + screenshot)
-  })
+  })()
 } catch (err) {
   console.error(err)
 }

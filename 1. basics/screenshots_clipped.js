@@ -19,10 +19,11 @@ const options = {
 }
 
 const puppeteer = require('puppeteer');
-puppeteer.launch().then(async browser => {
+(async () => {
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.setViewport(viewPort)
   await page.goto('https://finance.yahoo.com/')
   await page.screenshot(options)
   await browser.close()
-})
+})()

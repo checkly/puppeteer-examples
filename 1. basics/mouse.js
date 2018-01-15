@@ -9,7 +9,8 @@
 
 const puppeteer = require('puppeteer');
 
-puppeteer.launch().then(async browser => {
+(async () => {
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
   // set the viewport so we know the dimensions of the screen
@@ -24,4 +25,4 @@ puppeteer.launch().then(async browser => {
   // the screenshot should show feedback from the page that right part was clicked.
   await page.screenshot({ path: 'mouse_click.png' })
   await browser.close()
-})
+})()
