@@ -9,10 +9,11 @@
  */
 const puppeteer = require('puppeteer');
 
-puppeteer.launch().then(async browser => {
+(async () => {
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.goto('https://soundcloud.com/')
   await page.hover('.playableTile__artwork')
   await page.screenshot({ path: 'hover.png' })
   await browser.close()
-})
+})()

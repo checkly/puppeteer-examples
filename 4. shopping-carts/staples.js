@@ -6,7 +6,8 @@
 const puppeteer = require('puppeteer')
 const screenshot = 'shopping_staples.png'
 try {
-  puppeteer.launch().then(async browser => {
+  (async () => {
+    const browser = await puppeteer.launch({ headless: true })
     const page = await browser.newPage()
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto('https://www.staples.com/Painting-Supplies/cat_CL140420/bww15', { waitUntil: 'networkidle2' })
@@ -15,7 +16,7 @@ try {
     await page.screenshot({path: screenshot})
     await browser.close()
     console.log('See screen shot: ' + screenshot)
-  })
+  })()
 } catch (err) {
   console.error(err)
 }

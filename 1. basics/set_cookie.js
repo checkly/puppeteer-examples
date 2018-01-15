@@ -18,10 +18,11 @@ const cookie = {
 
 const puppeteer = require('puppeteer');
 
-puppeteer.launch().then(async browser => {
+(async () => {
+  const browser = await puppeteer.launch()
   const page = await browser.newPage()
   await page.setCookie(cookie)
   await page.goto('https://www.paypal.com/signin')
   await page.screenshot({ path: 'paypal_login.png' })
   await browser.close()
-})
+})()
