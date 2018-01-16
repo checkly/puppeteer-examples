@@ -41,8 +41,8 @@ const directories = [
   '2. search/*.js',
   '3. login/*.js',
   '4. shopping-carts/*.js',
-  '5. mocha-tests/*.js',
-  '6. jest-tests/*.js'
+  'a. mocha-tests/*.js',
+  'b. jest-tests/*.js'
 ]
 
 fsS.recurseSync('.', directories, (filePath, relative, fileName) => {
