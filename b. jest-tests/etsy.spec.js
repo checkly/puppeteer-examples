@@ -24,12 +24,12 @@ describe('Etsy shopping cart', () => {
   test('selects the first product', async () => {
     const products = await page.$$('.placeholder-content')
     await products[0].click()
-    await page.waitForSelector('button.btn-transaction')
+    await page.waitForSelector('button.btn-buy-box')
     expect.anything('Buy button is visible')
   }, 10000)
 
   test('adds the product to the cart', async () => {
-    await page.click('button.btn-transaction')
+    await page.click('button.btn-buy-box')
     await page.waitForSelector('h1.item-count')
     const quantity = await page.evaluate(() => document.querySelector('h1.item-count').textContent.trim())
     expect(quantity).toBe('1 item in your cart')
