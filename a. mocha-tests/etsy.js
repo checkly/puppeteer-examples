@@ -25,12 +25,12 @@ describe('Etsy shopping cart', () => {
   it('selects the first product', async () => {
     const products = await page.$$('.placeholder-content')
     await products[0].click()
-    await page.waitForSelector('button.btn-transaction')
+    await page.waitForSelector('button.btn-buy-box')
     assert.ok('Buy button showing')
   }).timeout(10000)
 
   it('adds the product to the cart', async () => {
-    await page.click('button.btn-transaction')
+    await page.click('button.btn-buy-box')
     await page.waitForSelector('h1.item-count')
     const quantity = await page.evaluate(() => document.querySelector('h1.item-count').textContent.trim())
     assert.equal(quantity, '1 item in your cart')
