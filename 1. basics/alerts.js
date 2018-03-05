@@ -14,7 +14,7 @@ const puppeteer = require('puppeteer');
   page.on('dialog', async dialog => {
     console.log(dialog.message())
     await dialog.dismiss()
-    await browser.close()
   })
-  page.evaluate(() => alert('This message is inside an alert box'))
+  await page.evaluate(() => alert('This message is inside an alert box'))
+  await browser.close()
 })()
