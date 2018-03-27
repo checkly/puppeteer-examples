@@ -14,6 +14,7 @@ You can run these scripts in the [try puppeteer playground](https://trypuppeteer
   * [alerts](#alerts)
   * [emulate devices](#emulate-devices)
   * [get list of links](#get-list-of-links)
+  * [get text value of an element](#get-text-value-of-an-element)
   * [get title](#get-title)
   * [hover](#hover)
   * [keyboard](#keyboard)
@@ -34,6 +35,7 @@ You can run these scripts in the [try puppeteer playground](https://trypuppeteer
 - [a. mocha-tests](#a-mocha-tests)
   * [Alibaba product search](#alibaba-product-search)
   * [Amazon product search](#amazon-product-search)
+  * [Duck Duck Go search](#duck-duck-go-search)
   * [Etsy shopping cart](#etsy-shopping-cart)
   * [Gmail signup](#gmail-signup)
   * [Google search](#google-search)
@@ -64,6 +66,11 @@ Scrapes Hacker News for links on the home page and returns the top 10
 
 
 [1. basics/get_list_of_links.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/get_list_of_links.js)
+### get text value of an element
+Gets the text value of an element by using the page.evaluate method
+
+
+[1. basics/get_text_value.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/get_text_value.js)
 ### get title
 Get the title of a page and print it to the console.
 
@@ -152,6 +159,11 @@ Searches Amazon.com for a product and checks if the results show up
 
 
 [a. mocha-tests/amazon.js](https://github.com/checkly/puppeteer-examples/blob/master/a.%20mocha-tests/amazon.js)
+### Duck Duck Go search
+Goes to duckduckgo.com, searches for "chrome puppeteer", asserts the result and snaps a screenshots
+
+
+[a. mocha-tests/duck_duck_go.js](https://github.com/checkly/puppeteer-examples/blob/master/a.%20mocha-tests/duck_duck_go.js)
 ### Etsy shopping cart
 Goes to etsy.com, select the first knick knack and adds it to the shopping cart.
 
