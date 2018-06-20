@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "puppeteer": "^1.0.0"
+    "puppeteer": "^1.5.0"
   },
   "devDependencies": {
     "eslint-plugin-mocha": "^4.11.0",

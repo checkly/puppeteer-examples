@@ -16,17 +16,18 @@ before(async () => {
 })
 
 describe('Etsy shopping cart', () => {
-  it('shows the correct category', async () => {
+  it('shows the privacy modal', async () => {
     await page.goto('https://www.etsy.com/c/art-and-collectibles/collectibles/figurines?ref=catnav-66', { waitUntil: 'networkidle2' })
-    const categoryTitle = await page.evaluate(() => document.querySelector('h1').textContent)
-    assert.equal(categoryTitle, 'Figurines & Knicknacks')
+    await page.waitForSelector('[data-gdpr-single-choice-accept]')
+    await page.click('[data-gdpr-single-choice-accept]')
   }).timeout(20000)
 
   it('selects the first product', async () => {
+    await page.waitForSelector('.placeholder-content')
     const products = await page.$$('.placeholder-content')
-    await products[0].click()
+    await products[5].click()
     await page.waitForSelector('button.btn-buy-box')
-    assert.ok('Buy button showing')
+    assert.ok('Add to cart button showing')
   }).timeout(10000)
 
   it('adds the product to the cart', async () => {
