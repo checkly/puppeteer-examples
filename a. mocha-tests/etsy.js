@@ -22,7 +22,7 @@ describe('Etsy shopping cart', () => {
     await page.click('[data-gdpr-single-choice-accept]')
   }).timeout(20000)
 
-  it('selects the first product', async () => {
+  it('selects a product', async () => {
     await page.waitForSelector('.placeholder-content')
     const products = await page.$$('.placeholder-content')
     await products[5].click()
