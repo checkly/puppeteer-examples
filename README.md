@@ -32,6 +32,8 @@ You can run these scripts in the [try puppeteer playground](https://puppeteersan
 - [4. shopping-carts](#4-shopping-carts)
   * [Staples shopping cart](#staples-shopping-cart)
   * [Walmart shopping cart](#walmart-shopping-cart)
+- [5. parallel-pages](#5-parallel-pages)
+  * [Screenshots parallel](#screenshots-parallel)
 - [a. mocha-tests](#a-mocha-tests)
   * [Alibaba product search](#alibaba-product-search)
   * [Amazon product search](#amazon-product-search)
@@ -147,6 +149,15 @@ Looks for a Nintendo's Mario Odyssey and adds it to the shopping cart.
 
 
 [4. shopping-carts/walmart.js](https://github.com/checkly/puppeteer-examples/blob/master/4.%20shopping-carts/walmart.js)
+
+
+## 5. parallel-pages
+### Screenshots parallel
+Allow parallel processing screenshot.
+
+[5. parallel-pages/screenshots_parallel.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20parallel-pages/screenshots_parallel.js)
+
+
 ## A. mocha-tests
 undefined  
 ### Alibaba product search

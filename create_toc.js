@@ -20,13 +20,14 @@ const headers = {
   '2. search': 'Common search input and select methods on search results.',
   '3. login': 'Common login scenarios on popular website. Credentials mostly supplied with setting `ENV` variables.',
   '4. shopping-carts': 'How to handle shopping cart functions like adding and removing items.',
-  '5. mocha-tests': 'Mocha test runner scripts that use Puppeteer and the standard `assert` library to check specific ' +
+  '5. parallel-pages': 'How to handle Allow parallel processing pages.',
+  '6. mocha-tests': 'Mocha test runner scripts that use Puppeteer and the standard `assert` library to check specific ' +
   'properties and actions on a page. Install Mocha as a global dependency and run them as any other script\n\n' +
   '```bash\n' +
   'npm i -g mocha\n' +
   'mocha mocha-tests/alibaba.js\n' +
   '```',
-  '6. jest-tests': 'Jest test runner scripts that use Puppeteer to check specific properties and actions on a page. ' +
+  '7. jest-tests': 'Jest test runner scripts that use Puppeteer to check specific properties and actions on a page. ' +
   'Very similar to the Mocha tests, but using the Jest `expect` assertions. Install Jest as a global dependency and ' +
   'run them as any other script\n\n' +
   '```bash\n' +
@@ -41,6 +42,7 @@ const directories = [
   '2. search/*.js',
   '3. login/*.js',
   '4. shopping-carts/*.js',
+  '5. parallel-pages/*.js',
   'a. mocha-tests/*.js',
   'b. jest-tests/*.js'
 ]
