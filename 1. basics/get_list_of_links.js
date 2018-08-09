@@ -12,10 +12,7 @@ const puppeteer = require('puppeteer');
   await page.goto('https://news.ycombinator.com/news')
 
   // execute standard javascript in the context of the page.
-  const stories = await page.evaluate(() => {
-    const anchors = Array.from(document.querySelectorAll('a.storylink'))
-    return anchors.map(anchor => anchor.textContent).slice(0, 10)
-  })
+  const stories = await page.$$eval('a.storylink', anchors => { return anchors.map(anchor => anchor.textContent).slice(0, 10) })
   console.log(stories)
   await page.tracing.stop();
   await browser.close()

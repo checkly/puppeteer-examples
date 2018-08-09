@@ -20,15 +20,12 @@ describe('Check Google Homepage', () => {
     assert.equal(title, 'Google')
   }).timeout(10000)
 
-  it('First search result is my link', async () => {
+  it('Third search result is my link', async () => {
     await page.type('input[name=q]', 'puppeteer', { delay: 100 })
     await page.click('input[type="submit"]')
     await page.waitForSelector('h3 a')
-    const links = await page.evaluate(() => {
-      return Array.from(document.querySelectorAll('h3 a'))
-        .map(a => { return a.textContent })
-    })
-    assert.equal('This will fail...', links[0])
+    const links = await page.$$eval('h3 a', anchors => { return anchors.map(a => { return a.textContent }) })
+    assert.equal('This will fail...', links[2])
   }).timeout(10000)
 })
 

@@ -14,8 +14,7 @@ try {
     await page.click('.sb-searchbox__button')
     await page.waitForSelector('#hotellist_inner')
     await page.screenshot({ path: screenshot })
-    const hotels = await page.evaluate(() => {
-      const anchors = Array.from(document.querySelectorAll('span.sr-hotel__name'))
+    const hotels = await page.$$eval('span.sr-hotel__name', anchors => {
       return anchors.map(anchor => anchor.textContent.trim()).slice(0, 10)
     })
     console.log(hotels)

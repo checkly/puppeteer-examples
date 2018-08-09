@@ -33,7 +33,7 @@ describe('Etsy shopping cart', () => {
   it('adds the product to the cart', async () => {
     await page.click('button.btn-buy-box')
     await page.waitForSelector('h1.item-count')
-    const quantity = await page.evaluate(() => document.querySelector('h1.item-count').textContent.trim())
+    const quantity = await page.$eval('h1.item-count', counter => { return counter.textContent.trim() })
     assert.equal(quantity, '1 item in your cart')
   }).timeout(10000)
 })
