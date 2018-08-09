@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/checkly/puppeteer-examples.git"
   },
-  "author": "",
+  "author": "Tim Nolet",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/checkly/puppeteer-examples/issues"

@@ -1,7 +1,7 @@
 /**
  * @name get text value of an element
  *
- * @desc Gets the text value of an element by using the page.evaluate method
+ * @desc Gets the text value of an element by using the page.$eval method
  *
  */
 const puppeteer = require('puppeteer');
