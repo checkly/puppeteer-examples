@@ -22,7 +22,7 @@ describe('codesandbox.io', () => {
     await page.click('a[href="/s/vue"]')
     await page.waitForSelector('.react-monaco-editor-container')
     const editor = await page.$('.react-monaco-editor-container')
-    await page.screenshot({ path: 'codesandbox_vanillajs.png' })
+    await page.screenshot({ path: 'codesandbox.png' })
     expect(editor).toBeTruthy()
   }, 30000)
 })
