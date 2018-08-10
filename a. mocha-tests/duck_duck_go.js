@@ -16,7 +16,6 @@ before(async () => {
 
 describe('Duck Duck Go Search', () => {
   it('returns Chrome Puppeteer Github repo as first search result', async () => {
-
     await page.goto('https://duckduckgo.com/', { waitUntil: 'networkidle2' })
     await page.type('input#search_form_input_homepage', 'chrome puppeteer', { delay: 50 })
     await page.click('input#search_button_homepage')
