@@ -1,5 +1,7 @@
 # Puppeteer examples
 
+# Puppeteer examples
+
 Puppeteer Headless Chrome examples for real life use cases. Clone this repo and run them directy with a simple `node` command.
 
 ```bash
@@ -8,7 +10,7 @@ cd puppeteer-examples
 npm i
 node 2.\ search/amazon.js
 ```
-You can run these scripts in the [try puppeteer playground](https://puppeteersandbox.com).
+You can run these scripts in the [try puppeteer playground](https://trypuppeteer.com).
 
 - [1. basics](#1-basics)
   * [alerts](#alerts)
@@ -29,14 +31,16 @@ You can run these scripts in the [try puppeteer playground](https://puppeteersan
   * [Youtube search](#youtube-search)
 - [3. login](#3-login)
   * [Github](#github)
+  * [Google Social Login](#google-social-login)
 - [4. shopping-carts](#4-shopping-carts)
   * [Staples shopping cart](#staples-shopping-cart)
   * [Walmart shopping cart](#walmart-shopping-cart)
 - [5. parallel-pages](#5-parallel-pages)
-  * [Screenshots parallel](#screenshots-parallel)
+  * [Screenshots parallel pages](#screenshots-parallel-pages)
 - [a. mocha-tests](#a-mocha-tests)
   * [Alibaba product search](#alibaba-product-search)
   * [Amazon product search](#amazon-product-search)
+  * [codesandbox.io](#codesandbox-io)
   * [Duck Duck Go search](#duck-duck-go-search)
   * [Etsy shopping cart](#etsy-shopping-cart)
   * [Gmail signup](#gmail-signup)
@@ -46,6 +50,7 @@ You can run these scripts in the [try puppeteer playground](https://puppeteersan
 - [b. jest-tests](#b-jest-tests)
   * [Alibaba product search](#alibaba-product-search)
   * [Amazon product search](#amazon-product-search)
+  * [codesandbox.io](#codesandbox-io)
   * [Etsy shopping cart](#etsy-shopping-cart)
   * [Google search](#google-search)
   * [Walmart shopping cart](#walmart-shopping-cart)
@@ -69,7 +74,7 @@ Scrapes Hacker News for links on the home page and returns the top 10
 
 [1. basics/get_list_of_links.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/get_list_of_links.js)
 ### get text value of an element
-Gets the text value of an element by using the page.evaluate method
+Gets the text value of an element by using the page.$eval method
 
 
 [1. basics/get_text_value.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/get_text_value.js)
@@ -137,6 +142,11 @@ Logs into Github. Provide your username and password as environment variables wh
 
 
 [3. login/github.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/github.js)
+### Google Social Login
+Logs into Checkly using Google social Login. Provide your username and password as environment variables when running the script, i.e: `GOOGLE_USER=myuser GOOGLE_PWD=mypassword node github.js`
+
+
+[3. login/google_social.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/google_social.js)
 ## 4. shopping-carts
 How to handle shopping cart functions like adding and removing items.  
 ### Staples shopping cart
@@ -149,15 +159,13 @@ Looks for a Nintendo's Mario Odyssey and adds it to the shopping cart.
 
 
 [4. shopping-carts/walmart.js](https://github.com/checkly/puppeteer-examples/blob/master/4.%20shopping-carts/walmart.js)
-
-
 ## 5. parallel-pages
-### Screenshots parallel
-Allow parallel processing screenshot.
+How to handle Allow parallel processing pages.  
+### Screenshots parallel pages
+Allow parallel processing screenshot
+
 
 [5. parallel-pages/screenshots_parallel.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20parallel-pages/screenshots_parallel.js)
-
-
 ## A. mocha-tests
 undefined  
 ### Alibaba product search
@@ -170,6 +178,11 @@ Searches Amazon.com for a product and checks if the results show up
 
 
 [a. mocha-tests/amazon.js](https://github.com/checkly/puppeteer-examples/blob/master/a.%20mocha-tests/amazon.js)
+### codesandbox.io
+Goes to codesandbox.io, creates a new sandbox and selects the Vue.js template
+
+
+[a. mocha-tests/codesandbox.js](https://github.com/checkly/puppeteer-examples/blob/master/a.%20mocha-tests/codesandbox.js)
 ### Duck Duck Go search
 Goes to duckduckgo.com, searches for "chrome puppeteer", asserts the result and snaps a screenshots
 
@@ -212,6 +225,11 @@ Searches Amazon.com for a product and checks if the results show up
 
 
 [b. jest-tests/amazon.spec.js](https://github.com/checkly/puppeteer-examples/blob/master/b.%20jest-tests/amazon.spec.js)
+### codesandbox.io
+Goes to codesandbox.io, creates a new sandbox and selects the Vue.js template
+
+
+[b. jest-tests/codesandbox.spec.js](https://github.com/checkly/puppeteer-examples/blob/master/b.%20jest-tests/codesandbox.spec.js)
 ### Etsy shopping cart
 Goes to etsy.com, select the first knick knack and adds it to the shopping cart.
 
