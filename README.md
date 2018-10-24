@@ -30,11 +30,13 @@ You can run these scripts in the [try puppeteer playground](https://trypuppeteer
 - [3. login](#3-login)
   * [Github](#github)
   * [Google Social Login](#google-social-login)
+  * [Twitter](#twitter)
 - [4. shopping-carts](#4-shopping-carts)
   * [Staples shopping cart](#staples-shopping-cart)
   * [Walmart shopping cart](#walmart-shopping-cart)
 - [5. parallel-pages](#5-parallel-pages)
   * [Screenshots parallel pages](#screenshots-parallel-pages)
+  * [Screenshots parallel pages in batches](#screenshots-parallel-pages-in-batches)
 - [a. mocha-tests](#a-mocha-tests)
   * [Alibaba product search](#alibaba-product-search)
   * [Amazon product search](#amazon-product-search)
@@ -145,6 +147,11 @@ Logs into Checkly using Google social Login. Provide your username and password 
 
 
 [3. login/google_social.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/google_social.js)
+### Twitter
+Logs into Twitter. Provide your username and password as environment variables when running the script, i.e: `TWITTER_USER=myuser TWITTER_PWD=mypassword node twitter.js`
+
+
+[3. login/twitter.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/twitter.js)
 ## 4. shopping-carts
 How to handle shopping cart functions like adding and removing items.  
 ### Staples shopping cart
@@ -164,6 +171,11 @@ Allow parallel processing screenshot
 
 
 [5. parallel-pages/screenshots_parallel.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20parallel-pages/screenshots_parallel.js)
+### Screenshots parallel pages in batches
+parallel screenshotting of an array of Websites with small example
+
+
+[5. parallel-pages/screenshots_parallel_cologne_colleges.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20parallel-pages/screenshots_parallel_cologne_colleges.js)
 ## A. mocha-tests
 undefined  
 ### Alibaba product search
