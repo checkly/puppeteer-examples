@@ -103,6 +103,11 @@ Renders a PDF of the Puppeteer API spec. This is a pretty long page and will gen
 
 
 [1. basics/pdf.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/pdf.js)
+### html2pdf
+Create a PDF from static HTML
+
+[1. basics/html2pdf.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/html2pdf.js)
+
 ### screenshots
 Snaps a basic screenshot of the full New York Time homepage and saves it a .png file.
 
