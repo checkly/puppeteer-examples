@@ -20,6 +20,7 @@ You can run these scripts in the [try puppeteer playground](https://trypuppeteer
   * [keyboard](#keyboard)
   * [mouse](#mouse)
   * [pdf](#pdf)
+  * [html2pdf](#html2pdf)
   * [screenshots](#screenshots)
   * [screenshots clipped](#screenshots-clipped)
   * [set cookie](#set-cookie)
