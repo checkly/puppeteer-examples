@@ -8,7 +8,7 @@ cd puppeteer-examples
 npm i
 node 2.\ search/amazon.js
 ```
-You can run these scripts in the [try puppeteer playground](https://trypuppeteer.com).
+You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.com).
 
 - [1. basics](#1-basics)
   * [alerts](#alerts)
