@@ -9,12 +9,14 @@ const parallel = [1, 2, 3, 4, 5];
 
 (async () => {
   let browser = await puppeteer.launch()
-  for (const number of parallel) {
-    console.log('Page ID Spawned', number)
+  let promises = parallel.map(async number => {
     let page = await browser.newPage();
-    await page.setViewport({ width: 1280, height: 800 })
-    await page.goto(`https://en.wikipedia.org/wiki/${number}`)
-    await page.screenshot({ path: `wikipedia_${number}.png` })
-  }
+      return Promise.all([
+      page.setViewport({ width: 1280, height: 800 }),
+      page.goto(`https://en.wikipedia.org/wiki/${number}`),
+      page.screenshot({ path: `wikipedia_${number}.png` })
+    ])
+  })
+  await Promise.all(promises)
   await browser.close()
-})()
+})();
