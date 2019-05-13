@@ -13,7 +13,7 @@ const pageHeader = '# Puppeteer examples\n\nPuppeteer Headless Chrome examples f
   'npm i\n' +
   'node 2.\\ search/amazon.js\n' +
   '```\n' +
-  'You can run these scripts in the [try puppeteer playground](https://trypuppeteer.com).\n'
+  'You can run these scripts in the [https://puppeteersandbox.com](https://puppeteersandbox.com).\n'
 
 const headers = {
   '1. basics': 'The very basic on getting useful info from web page. Highlights the basic Puppeteer functions.',
