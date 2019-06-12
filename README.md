@@ -9,11 +9,11 @@ npm i
 node 2.\ search/amazon.js
 ```
 You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.com).
-You can run these scripts in the [https://puppeteersandbox.com](https://puppeteersandbox.com).
 
 - [1. basics](#1-basics)
   * [alerts](#alerts)
   * [emulate devices](#emulate-devices)
+  * [get the value of common form elements](#get-the-value-of-common-form-elements)
   * [get list of links](#get-list-of-links)
   * [get text value of an element](#get-text-value-of-an-element)
   * [get title](#get-title)
@@ -21,18 +21,17 @@ You can run these scripts in the [https://puppeteersandbox.com](https://puppetee
   * [keyboard](#keyboard)
   * [mouse](#mouse)
   * [pdf](#pdf)
-  * [html2pdf](#html2pdf)
   * [screenshots](#screenshots)
   * [screenshots clipped](#screenshots-clipped)
   * [set cookie](#set-cookie)
 - [2. search](#2-search)
   * [Amazon search](#amazon-search)
   * [Booking.com search](#booking-com-search)
+  * [Duck Duck Go search](#duck-duck-go-search)
   * [Youtube search](#youtube-search)
 - [3. login](#3-login)
   * [Github](#github)
   * [Google Social Login](#google-social-login)
-  * [Twitter](#twitter)
   * [Instagram](#instagram)
 - [4. shopping-carts](#4-shopping-carts)
   * [Staples shopping cart](#staples-shopping-cart)
@@ -71,6 +70,11 @@ Use the built in devices descriptors to emulate an Iphone 6. These are actually 
 
 
 [1. basics/emulate_devices.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/emulate_devices.js)
+### get the value of common form elements
+Gets the value of commonly used HTML form elements using page.$eval()
+
+
+[1. basics/forms.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/forms.js)
 ### get list of links
 Scrapes Hacker News for links on the home page and returns the top 10
 
@@ -106,11 +110,6 @@ Renders a PDF of the Puppeteer API spec. This is a pretty long page and will gen
 
 
 [1. basics/pdf.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/pdf.js)
-### html2pdf
-Create a PDF from static HTML
-
-[1. basics/html2pdf.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/html2pdf.js)
-
 ### screenshots
 Snaps a basic screenshot of the full New York Time homepage and saves it a .png file.
 
@@ -138,6 +137,11 @@ Finds accommodations in Berlin on Booking.com, takes a screenshot and logs the t
 
 
 [2. search/booking.js](https://github.com/checkly/puppeteer-examples/blob/master/2.%20search/booking.js)
+### Duck Duck Go search
+undefined
+
+
+[2. search/duck_duck_go.js](https://github.com/checkly/puppeteer-examples/blob/master/2.%20search/duck_duck_go.js)
 ### Youtube search
 Looks for Fleetwood Mac's "Dreams" video on youtube.com and clicks on the third video. Waits for 5 seconds for the video to load.
 
@@ -155,13 +159,8 @@ Logs into Checkly using Google social Login. Provide your username and password 
 
 
 [3. login/google_social.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/google_social.js)
-### Twitter
-Logs into Twitter. Provide your username and password as environment variables when running the script, i.e: `TWITTER_USER=myuser TWITTER_PWD=mypassword node twitter.js`
-
-
-[3. login/twitter.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/twitter.js)
 ### Instagram
-Logs into Instagram. Provide your username and password as environment variables when running the script, i.e: `INSTAGRAM_USER=myuser INSTAGRAM_PWD=mypassword node instagram.js`
+Logs into Instagram with credentials. Provide your username and password as environment variables when running the script, i.e: `INSTAGRAM_USER=myuser INSTAGRAM_PWD=mypassword node instagram.js`
 
 
 [3. login/instagram.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/instagram.js)
