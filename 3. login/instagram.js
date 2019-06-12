@@ -28,7 +28,16 @@ const screenshot = 'instagram.png';
 	await page.keyboard.type(process.env.INSTAGRAM_PWD);
 
 	//the selector of the "Login" button
-	await page.click("._0mzm-.sqdOP.L3NKy>.Igw0E.IwRSH.eGOV_._4EzTm");
+	// await page.click("._0mzm-.sqdOP.L3NKy>.Igw0E.IwRSH.eGOV_._4EzTm");
+	
+	//we find the Login btn using the innerText comparison because the selector used for the btn might be unstable
+	await page.evaluate(() => {
+		let btns = [...document.querySelector(".HmktE").querySelectorAll("button")];
+		btns.forEach(function (btn) {
+			if (btn.innerText == "Log In")
+				btn.click();
+		});
+	});
 
 	//Optional
 	//check if the element asking to download the app arises
