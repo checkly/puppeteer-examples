@@ -33,6 +33,7 @@ You can run these scripts in the [https://puppeteersandbox.com](https://puppetee
   * [Github](#github)
   * [Google Social Login](#google-social-login)
   * [Twitter](#twitter)
+  * [Instagram](#instagram)
 - [4. shopping-carts](#4-shopping-carts)
   * [Staples shopping cart](#staples-shopping-cart)
   * [Walmart shopping cart](#walmart-shopping-cart)
@@ -159,6 +160,11 @@ Logs into Twitter. Provide your username and password as environment variables w
 
 
 [3. login/twitter.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/twitter.js)
+### Instagram
+Logs into Instagram. Provide your username and password as environment variables when running the script, i.e: `INSTAGRAM_USER=myuser INSTAGRAM_PWD=mypassword node instagram.js`
+
+
+[3. login/instagram.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/instagram.js)
 ## 4. shopping-carts
 How to handle shopping cart functions like adding and removing items.  
 ### Staples shopping cart
