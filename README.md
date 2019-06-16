@@ -24,6 +24,7 @@ You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.co
   * [screenshots](#screenshots)
   * [screenshots clipped](#screenshots-clipped)
   * [set cookie](#set-cookie)
+  * [fake location](#fake-location)
 - [2. search](#2-search)
   * [Amazon search](#amazon-search)
   * [Booking.com search](#booking-com-search)
@@ -125,6 +126,11 @@ Sets the "login_email" property in a Paypal cookie so the login screen is pre-fi
 
 
 [1. basics/set_cookie.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/set_cookie.js)
+### fake-location
+Overrides the "Location Access" to always allow for a certain URL and when that URL requests the geolocation, we serve it with our own set of lat/long. Useful for testing of services having location constraints.
+
+
+[1. basics/location_faker.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/location_faker.js)
 ## 2. search
 Common search input and select methods on search results.  
 ### Amazon search
