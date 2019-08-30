@@ -19,15 +19,16 @@ describe('Amazon Homepage', () => {
     await page.goto('https://www.amazon.com',{ waitUntil: 'networkidle0' })
     const searchInput = await page.$('#twotabsearchtextbox')
     assert.ok(searchInput)
-    await page.screenshot({ path: 'amz.png'})
+    await page.screenshot({ path: 'mocha-amz-home.png'})
   }).timeout(20000)
 
   it('shows search results after search input', async () => {
     await page.type('#twotabsearchtextbox', 'nyan cat pullover')
     await page.click('input.nav-input')
-    await page.waitForSelector('#resultsCol')
+    await page.waitForSelector('.s-result-list')
     const firstProduct = await page.$('a.a-link-normal.a-text-normal')
     assert.ok(firstProduct)
+    await page.screenshot({path: "mocha-amz-result.png"})
   }).timeout(10000)
 })
 
