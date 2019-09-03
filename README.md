@@ -12,6 +12,7 @@ You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.co
 
 - [1. basics](#1-basics)
   * [alerts](#alerts)
+  * [Download file / upload file](#download-file-upload-file)
   * [emulate devices](#emulate-devices)
   * [get the value of common form elements](#get-the-value-of-common-form-elements)
   * [get list of links](#get-list-of-links)
@@ -19,12 +20,12 @@ You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.co
   * [get title](#get-title)
   * [hover](#hover)
   * [keyboard](#keyboard)
+  * [location_faker](#location-faker)
   * [mouse](#mouse)
   * [pdf](#pdf)
   * [screenshots](#screenshots)
   * [screenshots clipped](#screenshots-clipped)
   * [set cookie](#set-cookie)
-  * [fake location](#fake-location)
 - [2. search](#2-search)
   * [Amazon search](#amazon-search)
   * [Booking.com search](#booking-com-search)
@@ -66,6 +67,11 @@ Create an alert dialog and close it again.
 
 
 [1. basics/alerts.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/alerts.js)
+### Download file / upload file
+Find an image by class selector, downloads the image, saves it to disk and read it again. Use this together with a .fileUpload() method.
+
+
+[1. basics/download_upload.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/download_upload.js)
 ### emulate devices
 Use the built in devices descriptors to emulate an Iphone 6. These are actually shortcuts for calling page.setUserAgent() and page.setViewPort().
 
@@ -101,6 +107,11 @@ types into a text editor
 
 
 [1. basics/keyboard.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/keyboard.js)
+### location_faker
+Fake the location for the geolocation API used by the browsers
+
+
+[1. basics/location_faker.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/location_faker.js)
 ### mouse
 Most of the things you can click using straight .click() handlers, but for some situation directly instructing the mouse might be convenient. This example load a page that plays back what mouse actions are used on the page.
 
@@ -126,11 +137,6 @@ Sets the "login_email" property in a Paypal cookie so the login screen is pre-fi
 
 
 [1. basics/set_cookie.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/set_cookie.js)
-### fake-location
-Overrides the "Location Access" to always allow for a certain URL and when that URL requests the geolocation, we serve it with our own set of lat/long. Useful for testing of services having location constraints.
-
-
-[1. basics/location_faker.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/location_faker.js)
 ## 2. search
 Common search input and select methods on search results.  
 ### Amazon search
@@ -161,7 +167,7 @@ Logs into Github. Provide your username and password as environment variables wh
 
 [3. login/github.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/github.js)
 ### Google Social Login
-Logs into Checkly using Google social Login. Provide your username and password as environment variables when running the script, i.e: `GOOGLE_USER=myuser GOOGLE_PWD=mypassword node github.js`
+Logs into Checkly using Google social Login. Provide your username and password as environment variables when running the script, i.e: `GOOGLE_USER=myuser GOOGLE_PWD=mypassword node google_social.js`
 
 
 [3. login/google_social.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/google_social.js)
