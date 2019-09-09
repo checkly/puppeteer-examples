@@ -16,7 +16,9 @@ describe('Alibaba Search', () => {
   test('has search input', async () => {
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto('https://www.alibaba.com', { waitUntil: 'networkidle0' })
+    await page.waitForSelector('input.ui-searchbar-keyword')
     const searchInput = await page.$('input.ui-searchbar-keyword')
+    await page.screenshot({path: "jest-alibaba1.png"})
     expect(searchInput).toBeTruthy()
   }, 10000)
 
@@ -25,6 +27,7 @@ describe('Alibaba Search', () => {
     await page.click('input.ui-searchbar-submit')
     await page.waitForSelector('[data-content="abox-ProductNormalList"]')
     const firstProduct = await page.$('.item-content')
+    await page.screenshot({path: "jest-alibaba2.png"})
     expect(firstProduct).toBeTruthy()
   })
 

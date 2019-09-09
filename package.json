@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/checkly/puppeteer-examples/issues"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "homepage": "https://github.com/checkly/puppeteer-examples#readme"
 }

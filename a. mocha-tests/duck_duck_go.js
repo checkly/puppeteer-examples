@@ -21,9 +21,14 @@ describe('Duck Duck Go Search', () => {
     await page.click('input#search_button_homepage')
     await page.waitForSelector('.results--main #r1-0')
 
-    const githubLink = await page.$eval('a.result__a', link => { return link.textContent.trim() })
-    assert(githubLink, 'https://github.com/GoogleChrome/puppeteer')
-    await page.screenshot({ path: 'duckduckgo.png' })
+    const githubLink = await page.$eval('a.result__a', link => {
+      return link.href
+    })
+    console.log(githubLink)
+    assert.equal(githubLink, 'https://github.com/GoogleChrome/puppeteeR')
+    // assert.notStrictEqual(githubLink, 'https://github.com/GoogleChrome/puppeteeR')
+    // assert.equal([1, 2, 3].indexOf(4), -1);
+    await page.screenshot({ path: 'mocha-duckduckgo.png' })
   }).timeout(10000)
 })
 

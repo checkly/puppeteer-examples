@@ -17,7 +17,7 @@ describe('Check Gmail signup', () => {
   it('Landing page has CTA button', async () => {
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto('https://www.google.com/gmail/about/', { waitUntil: 'networkidle0' })
-    const SignUpButton = await page.$('a.hero_home__link__desktop')
+    const SignUpButton = await page.$('a.h-c-header__nav-li-link')
     assert.ok(SignUpButton)
   }).timeout(10000)
 })

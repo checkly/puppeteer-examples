@@ -23,6 +23,8 @@ describe('Walmart shopping cart', () => {
 
   it('adds the product to the cart', async () => {
     await page.click('button.prod-ProductCTA--primary')
+    await page.waitForSelector('.AddOnServicesPanel-addSelectionToCart')
+    await page.click('.checkoutBtn')
     await page.waitForSelector('.copy-mini.pos-item-qty')
     const quantity = await page.$eval('.copy-mini.pos-item-qty', txt => txt.textContent)
     assert.equal(quantity, '(1 item)')

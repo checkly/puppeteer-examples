@@ -22,10 +22,18 @@ describe('Check Google Homepage', () => {
 
   it('Third search result is my link', async () => {
     await page.type('input[name=q]', 'puppeteer', { delay: 100 })
+    await page.screenshot({path: "mocha-google.png"})
     await page.click('input[type="submit"]')
-    await page.waitForSelector('h3 a')
-    const links = await page.$$eval('h3 a', anchors => { return anchors.map(a => { return a.textContent }) })
-    assert.equal('This will fail...', links[2])
+    await page.waitForSelector('h3 div')
+    await page.screenshot({path: "mocha-google-results.png"})
+    const links = await page.$$eval('h3 div', anchors => { return anchors.map(div => { return div.textContent }) })
+    // Change output color:
+    // https://stackoverflow.com/questions/9781218/how-to-change-node-jss-console-font-color
+    console.log('\x1b[36m%s\x1b[0m', links)
+    // console.log('\x1b[0m%s\x1b[0m', links)
+    // console.clear()
+    console.log(links)
+    assert.equal('This will fail...', links[3])
   }).timeout(10000)
 })
 

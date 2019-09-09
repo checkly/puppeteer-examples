@@ -36,6 +36,7 @@ describe('Alibaba Search', () => {
     // click the first result and assert it returns something
     await page.click('input.ui-searchbar-submit')
     await page.waitForSelector('[data-content="abox-ProductNormalList"]')
+    await page.screenshot({path: "mocha-alibaba.png"})
     const firstProduct = await page.$('.item-content')
     assert.ok(firstProduct)
   }).timeout(10000)

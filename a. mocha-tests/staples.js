@@ -9,14 +9,26 @@ let browser
 let page
 
 before(async () => {
-  browser = await puppeteer.launch()
+  // If you see 403 error (access denied), it must be using anti-bot heuristics,check https://github.com/GoogleChrome/puppeteer/issues/1463
+  browser = await puppeteer.launch({
+    headless: false
+  })
   page = await browser.newPage()
 })
 
 describe('Staples shopping cart', () => {
   it('shows the painting category', async () => {
-    await page.setViewport({ width: 1280, height: 800 })
-    await page.goto('https://www.staples.com/Painting-Supplies/cat_CL140420/bww15', { waitUntil: 'networkidle2' })
+    await page.setViewport({
+      width: 1280,
+      height: 800
+    })
+    await page.goto('https://www.staples.com/Painting-Supplies/cat_CL140420/bww15', {
+      waitUntil: 'networkidle2'
+    })
+    await page.screenshot({
+      path: "mocha-staples.png"
+    })
+    // If you see 403 error (access denied), it must be using anti-bot heuristics,check https://github.com/GoogleChrome/puppeteer/issues/1463
     const category = await page.$eval('h1', txt => txt.textContent.trim())
     assert.equal(category, 'Painting')
   }).timeout(20000)
@@ -30,5 +42,5 @@ describe('Staples shopping cart', () => {
 })
 
 after(async () => {
- await browser.close()
+  await browser.close()
 })
