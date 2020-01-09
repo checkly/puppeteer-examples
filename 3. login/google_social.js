@@ -15,8 +15,8 @@ const puppeteer = require('puppeteer');
 
     const navigationPromise = page.waitForNavigation()
 
-    await page.waitForSelector('div > .social > .text-center > .login-google-button > span')
-    await page.click('div > .social > .text-center > .login-google-button > span')
+    await page.waitForSelector('#app > div > div > div > div > div > div > div:nth-child(3) > div.social > div > button.btn.btn-block.social-button.google-button.mb-3')
+    await page.click('#app > div > div > div > div > div > div > div:nth-child(3) > div.social > div > button.btn.btn-block.social-button.google-button.mb-3')
 
     await navigationPromise
     await page.waitForSelector('input[type="email"]')
