@@ -58,7 +58,8 @@ You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.co
   * [Etsy shopping cart](#etsy-shopping-cart)
   * [Google search](#google-search)
   * [Walmart shopping cart](#walmart-shopping-cart)
-
+- [6. CI/CD](#5-deploy)
+  * [Buddy](#)
 
 ## 1. basics
 The very basic on getting useful info from web page. Highlights the basic Puppeteer functions.  
@@ -279,3 +280,8 @@ Goes to walmart.com and adds a Nintendo game to an empty shopping cart. Validate
 
 
 [b. jest-tests/walmart.spec.js](https://github.com/checkly/puppeteer-examples/blob/master/b.%20jest-tests/walmart.spec.js)
+
+
+## 5. CI/CD
+
+### [How to use Puppeteer screenshots in Buddy](https://buddy.works/guides/how-take-screenshots-with-puppeteer-headless-chrome)
