@@ -30,5 +30,5 @@ describe('Staples shopping cart', () => {
 })
 
 after(async () => {
- await browser.close()
+  await browser.close()
 })

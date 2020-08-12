@@ -20,7 +20,7 @@ describe('Google Homepage', () => {
     expect(title).toBe('Google')
   })
 
-  afterAll( async () => {
+  afterAll(async () => {
     await browser.close()
   })
 })

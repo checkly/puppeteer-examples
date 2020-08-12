@@ -18,7 +18,6 @@ before(async () => {
 // Start a test suite with two tests.
 describe('Alibaba Search', () => {
   it('has search input', async () => {
-
     // Set the view port size so we can "see" the whole page
     await page.setViewport({ width: 1280, height: 800 })
     await page.goto('https://www.alibaba.com', { waitUntil: 'networkidle0' })
@@ -29,7 +28,6 @@ describe('Alibaba Search', () => {
   }).timeout(20000)
 
   it('shows search results after search input', async () => {
-
     // search for the term "luck cat"
     await page.type('input.ui-searchbar-keyword', 'lucky cat')
 

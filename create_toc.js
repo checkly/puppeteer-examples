@@ -36,7 +36,6 @@ const headers = {
   '```'
 }
 
-
 const directories = [
   '1. basics/*.js',
   '2. search/*.js',
@@ -70,14 +69,14 @@ function compileEntry (filePath, relative, content) {
 console.log(pageHeader)
 
 // index
-for (let key in toc) {
+for (const key in toc) {
   console.log(`- [${key}](#${_.kebabCase(key)})`)
   toc[key].forEach(item => {
     console.log(`  * [${item.name}](#${_.kebabCase(item.name)})`)
   })
 }
 console.log('\n')
-for (let key in toc) {
+for (const key in toc) {
   // content
   console.log(`## ${_.capitalize(key)}`)
   console.log(`${headers[key]}  `)
@@ -85,6 +84,6 @@ for (let key in toc) {
     console.log(`### ${item.name}`)
     console.log(item.desc)
     console.log('\n')
-    console.log(`[${item.relative}](${item.url.replace(/ /g,'%20')})`)
+    console.log(`[${item.relative}](${item.url.replace(/ /g, '%20')})`)
   })
 }

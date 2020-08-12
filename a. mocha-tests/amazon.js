@@ -16,10 +16,10 @@ before(async () => {
 describe('Amazon Homepage', () => {
   it('has search input', async () => {
     await page.setViewport({ width: 1280, height: 800 })
-    await page.goto('https://www.amazon.com',{ waitUntil: 'networkidle0' })
+    await page.goto('https://www.amazon.com', { waitUntil: 'networkidle0' })
     const searchInput = await page.$('#twotabsearchtextbox')
     assert.ok(searchInput)
-    await page.screenshot({ path: 'amz.png'})
+    await page.screenshot({ path: 'amz.png' })
   }).timeout(20000)
 
   it('shows search results after search input', async () => {

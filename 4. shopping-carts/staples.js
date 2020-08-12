@@ -13,7 +13,7 @@ try {
     await page.goto('https://www.staples.com/Painting-Supplies/cat_CL140420/bww15', { waitUntil: 'networkidle2' })
     await page.click('button.add-to-cart-btn.addToCart')
     await page.waitForSelector('h4.cart-items-header')
-    await page.screenshot({path: screenshot})
+    await page.screenshot({ path: screenshot })
     await browser.close()
     console.log('See screen shot: ' + screenshot)
   })()

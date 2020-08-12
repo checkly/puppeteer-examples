@@ -8,7 +8,7 @@
 const puppeteer = require('puppeteer')
 const screenshot = 'github.png';
 (async () => {
-  const browser = await puppeteer.launch({headless: true})
+  const browser = await puppeteer.launch({ headless: true })
   const page = await browser.newPage()
   await page.goto('https://github.com/login')
   await page.type('#login_field', process.env.GITHUB_USER)
