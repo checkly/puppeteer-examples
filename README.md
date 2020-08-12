@@ -23,6 +23,7 @@ You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.co
   * [location_faker](#location-faker)
   * [mouse](#mouse)
   * [pdf](#pdf)
+  * [request interception](#request-interception)
   * [screenshots](#screenshots)
   * [screenshots clipped](#screenshots-clipped)
   * [set cookie](#set-cookie)
@@ -35,6 +36,7 @@ You can run these scripts in the [puppeteer sandbox](https://puppeteersandbox.co
   * [Github](#github)
   * [Google Social Login](#google-social-login)
   * [Instagram](#instagram)
+  * [Microsoft Live Login](#microsoft-live-login)
 - [4. shopping-carts](#4-shopping-carts)
   * [Staples shopping cart](#staples-shopping-cart)
   * [Walmart shopping cart](#walmart-shopping-cart)
@@ -122,6 +124,11 @@ Renders a PDF of the Puppeteer API spec. This is a pretty long page and will gen
 
 
 [1. basics/pdf.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/pdf.js)
+### request interception
+Uses Puppeteer request interception, blocks images from loading, then snaps a basic screenshot of the full New York Time homepage and saves it a .png file.
+
+
+[1. basics/request_interception.js](https://github.com/checkly/puppeteer-examples/blob/master/1.%20basics/request_interception.js)
 ### screenshots
 Snaps a basic screenshot of the full New York Time homepage and saves it a .png file.
 
@@ -176,6 +183,11 @@ Logs into Instagram with credentials. Provide your username and password as envi
 
 
 [3. login/instagram.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/instagram.js)
+### Microsoft Live Login
+Logs into MS Live. Provide your username and password as environment variables when running the script, i.e: linux: MSLIVE_USER=myuser MSLIVE_PWD=mypassword node mslive.js Windows users: SET MSLIVE_USER=myuser SET MSLIVE_PWD=mypassword node mslive.js for more info see here: https://stackoverflow.com/questions/9249830/how-can-i-set-node-env-production-on-windows
+
+
+[3. login/mslive.js](https://github.com/checkly/puppeteer-examples/blob/master/3.%20login/mslive.js)
 ## 4. shopping-carts
 How to handle shopping cart functions like adding and removing items.  
 ### Staples shopping cart
@@ -201,7 +213,12 @@ parallel screenshotting of an array of Websites with small example
 
 [5. parallel-pages/screenshots_parallel_cologne_colleges.js](https://github.com/checkly/puppeteer-examples/blob/master/5.%20parallel-pages/screenshots_parallel_cologne_colleges.js)
 ## A. mocha-tests
-undefined  
+Mocha test runner scripts that use Puppeteer and the standard `assert` library to check specific properties and actions on a page. They can be executed like: 
+
+```bash
+cd "a. mocha-tests"
+npx mocha alibaba.js
+```  
 ### Alibaba product search
 Searches Alibaba.com for a product and checks if the results show up
 
@@ -248,7 +265,12 @@ Goes to walmart.com and adds a Nintendo game to an empty shopping cart. Validate
 
 [a. mocha-tests/walmart.js](https://github.com/checkly/puppeteer-examples/blob/master/a.%20mocha-tests/walmart.js)
 ## B. jest-tests
-undefined  
+Jest test runner scripts that use Puppeteer to check specific properties and actions on a page. Very similar to the Mocha tests, but using the Jest `expect` assertions. Install Jest as a global dependency and run them as any other script
+
+```bash
+npm i -g jest
+jest jest-tests/alibaba.js
+```  
 ### Alibaba product search
 Searches Alibaba.com for a product and checks if the results show up
 
