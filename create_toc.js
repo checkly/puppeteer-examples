@@ -21,8 +21,8 @@ const headers = {
   '3. login': 'Common login scenarios on popular website. Credentials mostly supplied with setting `ENV` variables.',
   '4. shopping-carts': 'How to handle shopping cart functions like adding and removing items.',
   '5. parallel-pages': 'How to handle Allow parallel processing pages.',
-  '6. mocha-tests': 'Mocha test runner scripts that use Puppeteer and the standard `assert` library to check specific ' +
-  'properties and actions on a page. Install Mocha as a global dependency and run them as any other script\n\n' +
+  'a. mocha-tests': 'Mocha test runner scripts that use Puppeteer and the standard `assert` library to check specific ' +
+  'properties and actions on a page. They can be executed like: \n\n' +
   '```bash\n' +
   'cd "a. mocha-tests"\n' +
   'npx mocha alibaba.js\n' +
