@@ -1,5 +1,8 @@
 # Puppeteer examples
 
+
+> Deprecation notice: We are moving our efforts to [theheadless.dev](https://github.com/checkly/theheadless.dev), a new free & open source knowledge base for Puppeteer AND Playwright. Idea is the same: practical examples and guides, by the community. We — the team at Checkly — are going to pour a lot of love & care into this new project. Feel free to [contribute!](https://github.com/checkly/theheadless.dev/blob/master/CONTRIBUTING.md)
+
 Puppeteer Headless Chrome examples for real life use cases. Clone this repo and run them directy with a simple `node` command.
 
 ```bash
