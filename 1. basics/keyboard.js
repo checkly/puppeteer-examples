@@ -13,6 +13,8 @@ const puppeteer = require('puppeteer');
   await page.goto('https://trix-editor.org/')
   await page.focus('trix-editor')
   await page.keyboard.type('Just adding a title')
+//   If you want to submit with button use this code. This will press Enter.
+//   await page.keyboard.press("Enter");
   await page.screenshot({ path: 'keyboard.png' })
   await browser.close()
 })()
